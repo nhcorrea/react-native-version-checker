@@ -133,5 +133,8 @@
       "eslint"
     ],
     "version": "0.57.2"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
   }
 }
