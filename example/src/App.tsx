@@ -1,12 +1,14 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-version-checker';
-
-const result = multiply(3, 7);
+import {
+  getCurrentVersion,
+  getPackageName,
+} from 'react-native-version-checker';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Package: {getPackageName()}</Text>
+      <Text>Version: {getCurrentVersion()}</Text>
     </View>
   );
 }

@@ -1,10 +1,19 @@
 #import "VersionChecker.h"
 
 @implementation VersionChecker
-- (NSNumber *)multiply:(double)a b:(double)b {
-    NSNumber *result = @(a * b);
 
-    return result;
+- (NSDictionary *)getConstants {
+    NSString *country = [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode] ?: @"";
+    NSString *packageName = [[NSBundle mainBundle] bundleIdentifier] ?: @"";
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] ?: @"";
+    NSString *currentBuildNumber = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"] ?: @"";
+
+    return @{
+        @"country": country,
+        @"packageName": packageName,
+        @"currentVersion": currentVersion,
+        @"currentBuildNumber": currentBuildNumber,
+    };
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
@@ -15,7 +24,7 @@
 
 + (NSString *)moduleName
 {
-  return @"VersionChecker";
+    return @"VersionChecker";
 }
 
 @end

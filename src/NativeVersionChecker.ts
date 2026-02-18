@@ -1,7 +1,12 @@
 import { TurboModuleRegistry, type TurboModule } from 'react-native';
 
 export interface Spec extends TurboModule {
-  multiply(a: number, b: number): number;
+  getConstants(): {
+    country: string;
+    packageName: string;
+    currentVersion: string;
+    currentBuildNumber: string;
+  };
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('VersionChecker');
