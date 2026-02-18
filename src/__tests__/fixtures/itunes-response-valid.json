@@ -1,0 +1,11 @@
+{
+  "resultCount": 1,
+  "results": [
+    {
+      "version": "2.5.1",
+      "trackId": 123456789,
+      "trackName": "Test App",
+      "bundleId": "com.example.app"
+    }
+  ]
+}
