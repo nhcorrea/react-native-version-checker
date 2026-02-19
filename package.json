@@ -1,7 +1,7 @@
 {
   "name": "react-native-version-checker",
   "version": "0.1.0",
-  "description": "Reliable app version checking and update prompts for React Native (iOS & Android).",
+  "description": "Type-safe app version checking and update prompts for React Native (iOS & Android). Built with TypeScript strict mode and runtime validation via Zod. Supports React Native New Architecture (TurboModule).",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
